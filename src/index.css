@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --stranger-red: #e50914;
+  --stranger-red-dark: #b20710;
+  --stranger-red-glow: rgba(229, 9, 20, 0.4);
+  --stranger-bg: #0a0a0a;
+  --stranger-bg-dark: #050505;
+  --stranger-text: #ffffff;
+  --stranger-text-dim: #b3b3b3;
+  --stranger-border: rgba(229, 9, 20, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rajdhani', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--stranger-bg);
+  color: var(--stranger-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Stranger Things style font for titles */
+.stranger-font,
+.section-title,
+.hero-title {
+  font-family: 'Bebas Neue', 'Orbitron', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stranger-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--stranger-red);
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--stranger-red-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--stranger-red-dark);
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--stranger-red);
+  color: var(--stranger-text);
+}
+
+::-moz-selection {
+  background: var(--stranger-red);
+  color: var(--stranger-text);
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--stranger-red);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Utility Classes */
+.red {
+  color: var(--stranger-red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page {
+  animation: fadeIn 0.5s ease-in;
+}
